@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnGrabbable : MonoBehaviour
+public class GrabbablePhysics : MonoBehaviour
 {
     Rigidbody m_rigidbody;
-    bool isGrabbed = false;
 
     public void ChangePhysics()
     {
         m_rigidbody = GetComponent<Rigidbody>();
         if(m_rigidbody == null)
         {
-            Debug.Log("Null Rigidbody");
+            Debug.Log("null ref");
             return;
         }
         m_rigidbody.useGravity = true;
